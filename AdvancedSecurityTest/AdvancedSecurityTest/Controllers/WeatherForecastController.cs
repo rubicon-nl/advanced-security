@@ -22,6 +22,7 @@ namespace AdvancedSecurityTest.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var stream = new MemoryStream();
+            GetValue();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -29,6 +30,11 @@ namespace AdvancedSecurityTest.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        public static string GetValue()
+        {
+            return "blabla";
         }
     }
 }
