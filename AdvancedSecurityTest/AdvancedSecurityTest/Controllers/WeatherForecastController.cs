@@ -22,6 +22,8 @@ namespace AdvancedSecurityTest.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var stream = new MemoryStream();
+            var streamReader = new StreamReader(stream);
+            streamReader.Read();
             GetValue();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
