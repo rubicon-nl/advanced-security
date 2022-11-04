@@ -4,6 +4,7 @@ public class Program
 {
 	public static void Main()
 	{
-		Console.WriteLine("Hello World");
+		var hardCodedString = "Hello World!";
+		Console.WriteLine(hardCodedString);
 	}
 }
