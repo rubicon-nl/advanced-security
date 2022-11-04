@@ -6,6 +6,7 @@ namespace AdvancedSecurityTest.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        public const string DefaultCertificatePassword = "C0mpl1c4t3d57r1ng";
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
