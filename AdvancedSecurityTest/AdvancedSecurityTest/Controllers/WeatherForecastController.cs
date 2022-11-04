@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
 
 namespace AdvancedSecurityTest.Controllers
 {
@@ -26,6 +27,7 @@ namespace AdvancedSecurityTest.Controllers
             var streamReader = new StreamReader(stream);
             streamReader.Read();
             GetValue();
+            var mode = CipherMode.ECB;
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -38,6 +40,11 @@ namespace AdvancedSecurityTest.Controllers
         public static string GetValue()
         {
             return "blabla";
+        }
+
+        public void DoLogin()
+        {
+
         }
     }
 }
